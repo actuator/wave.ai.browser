@@ -64,4 +64,4 @@ CWE-94: Improper Control of Generation of Code ('Code Injection'): The vulnerabi
 
 ### Conclusion:
 
-The manifest configuration of `wave.ai.browser` exposes it to potential arbitrary code execution risks. Immediate remediation actions should be taken to prevent malicious apps from exploiting this vulnerability.
+The manifest configuration of `wave.ai.browser` exposes it to potential arbitrary code execution risks.
