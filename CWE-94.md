@@ -26,9 +26,8 @@ Therefore a malicious app could craft an intent to load a website or execute arb
 
 ### POC:
 
-![wave_ai_uri](https://github.com/actuator/wave.ai.browser/assets/78701239/11744eeb-2c73-4d63-9cea-2986e85c60bb)
 
-
+![wave_ai_uri](https://github.com/actuator/wave.ai.browser/assets/78701239/cc22e955-a306-440c-8b92-00fdfc705717)
 
 
 
