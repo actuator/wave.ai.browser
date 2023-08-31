@@ -4,6 +4,8 @@
 
 The `wave.ai.browser` application contains a manifest entry that exports the `wave.ai.browser.ui.splash.SplashScreen` activity. This exported activity permits unauthorized applications to start it with arbitrary intent data & can lead to arbitrary code execution within the context of the `wave.ai.browser` application.
 
+⚠️ Internet permissions are not required since the invoked activity is exported.
+
 ### Detailed Description:
 
 An exported activity is one that can be invoked by other applications on the device. If not properly protected or if it implicitly trusts the data it receives, this can pose a security risk.
