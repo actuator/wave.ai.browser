@@ -2,7 +2,7 @@
 
 ### Overview:
 
-The `wave.ai.browser` application contains a manifest entry that exports the `wave.ai.browser.ui.splash.SplashScreen` activity. This exported activity permits unauthorized applications to start it with arbitrary intent data & can lead to arbitrary code execution within the context of the `wave.ai.browser` application.
+The `wave.ai.browser` application version 1.0.38 contains a manifest entry that exports the `wave.ai.browser.ui.splash.SplashScreen` activity. This exported activity permits unauthorized applications to start it with arbitrary intent data & can lead to arbitrary code execution within the context of the `wave.ai.browser` application.
 
 ### Detailed Description:
 
